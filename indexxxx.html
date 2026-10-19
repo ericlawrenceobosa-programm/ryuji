@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Portfolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@600;700&family=Press+Start+2P&family=DM+Serif+Display:ital@0;1&family=Bungee&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylereeeee.css"> <!-- explicitly tells the browser that the linked file is a CSS stylesheet that should be loaded and applied to the page.-->
+</head>
+<body>
+
+<!-- ============ ICON SPRITE (reused via <use>) ============ -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+    <path d="M3 7l9 6 9-6"></path>
+  </symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"></path>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+    <circle cx="12" cy="12" r="4"></circle>
+    <circle cx="17.2" cy="6.8" r="1"></circle>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+    <line x1="7" y1="10" x2="7" y2="17"></line>
+    <circle cx="7" cy="6.5" r="1"></circle>
+    <path d="M11 17v-4.5a2.5 2.5 0 0 1 5 0V17"></path>
+    <line x1="11" y1="10" x2="11" y2="17"></line>
+  </symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="4"></circle>
+    <path d="M4 21a8 8 0 0 1 16 0"></path>
+  </symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path>
+    <circle cx="12" cy="10" r="2.5"></circle>
+  </symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+    <line x1="8" y1="3" x2="8" y2="7"></line>
+    <line x1="16" y1="3" x2="16" y2="7"></line>
+  </symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path>
+  </symbol>
+  <symbol id="icon-spark" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 1l1.8 7.3L21 10l-7.2 1.7L12 19l-1.8-7.3L3 10l7.2-1.7L12 1z"></path>
+  </symbol>
+  <symbol id="icon-burst" viewBox="0 0 100 100" fill="currentColor" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round">
+    <polygon points="50.0,0.0 58.0,9.8 69.1,3.8 72.8,15.9 85.4,14.6 84.1,27.2 96.2,30.9 90.2,42.0 100.0,50.0 90.2,58.0 96.2,69.1 84.1,72.8 85.4,85.4 72.8,84.1 69.1,96.2 58.0,90.2 50.0,100.0 42.0,90.2 30.9,96.2 27.2,84.1 14.6,85.4 15.9,72.8 3.8,69.1 9.8,58.0 0.0,50.0 9.8,42.0 3.8,30.9 15.9,27.2 14.6,14.6 27.2,15.9 30.9,3.8 42.0,9.8"></polygon>
+  </symbol>
+  <symbol id="icon-squiggle" viewBox="0 0 84 16" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+    <path d="M3 8q6-10 12 0t12 0 12 0 12 0 12 0 12 0"></path>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12h32"></path>
+    <path d="M26 4l10 8-10 8"></path>
+  </symbol>
+  <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 4h10v5a5 5 0 0 1-10 0V4z"></path>
+    <path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path>
+    <path d="M12 14v4M8 21h8"></path>
+  </symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header id="top" class="site-header">
+  <a class="wordmark" href="#top">team<span class="wordmark__dot">.</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#member-01">Member 01</a>
+    <a href="#member-02">Member 02</a>
+    <a href="#member-03">Member 03</a>
+    <a href="#member-04">Member 04</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <span class="blob blob--hero-1" aria-hidden="true"></span>
+    <span class="blob blob--hero-2" aria-hidden="true"></span>
+    <span class="blob blob--hero-3" aria-hidden="true"></span>
+    <span class="blob blob--hero-4" aria-hidden="true"></span>
+    <span class="doodle doodle--hero-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg></span>
+    <span class="doodle doodle--hero-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"></path></svg></span>
+    <span class="doodle doodle--hero-3"><svg><use href="#icon-squiggle"></use></svg></span>
+    <span class="burst burst--hero" aria-hidden="true"><svg><use href="#icon-burst"></use></svg><b>meet<br>us!</b></span>
+
+    <p class="year-badge">26</p>
+
+    <h1 class="hero__title">
+      <span class="hero__title-line hero__title-line--a">GROUP 4</span>
+      <span class="hero__title-line hero__title-line--b">PORTFOLIO<svg class="hero__excl" viewBox="0 0 40 160" fill="none" stroke="currentColor" stroke-width="8"><path d="M20 8v96"></path><circle cx="20" cy="140" r="10" fill="currentColor" stroke="none"></circle></svg></span>
+    </h1>
+
+    <div class="hero__tagrow">
+      <span class="tag-label">FOUR BUILDERS</span>
+      <span class="tag-chip">group project <svg class="tag-chip__icon"><use href="#icon-arrow"></use></svg></span>
+      <svg class="spark spark--hero"><use href="#icon-spark"></use></svg>
+    </div>
+
+    <p class="hero__caption">
+      Scroll down <svg class="inline-arrow"><use href="#icon-arrow"></use></svg> meet the team
+    </p>
+  </section>
+
+  <!-- ============ TICKER STRIP (CSS-only animation) ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦&nbsp;</span>
+      <span>GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦ GROUP 4 ✦ PORTFOLIO ✦ 2026 ✦&nbsp;</span>
+    </div>
+  </div>
+
+
+  <!-- ============ MEMBER 01 — ARCADE PLAYER CARD ============ -->
+  <section id="member-01" class="member member--eric" aria-labelledby="name-01">
+    <span class="doodle eric__spark eric__spark--1" aria-hidden="true"><svg><use href="#icon-spark"></use></svg></span>
+    <span class="doodle eric__spark eric__spark--2" aria-hidden="true"><svg><use href="#icon-spark"></use></svg></span>
+    <div class="member__inner">
+
+      <div class="eric__top">
+        <div class="eric__tags">
+          <p class="eric__tag">PLAYER 1</p>
+          <p class="eric__tag eric__tag--blink">PRESS START ▶</p>
+        </div>
+        <span class="eric__num" aria-hidden="true">01</span>
+      </div>
+
+      <div class="eric__layout">
+        <figure class="eric__card">
+          <div class="eric__card-inner">
+            <div class="eric__card-bar"><span>P1</span><span>★ ★ ★</span></div>
+            <div class="photo-frame">EO
+          <img class="photo-frame__img" src="ERIC1BY1.jpg" alt="Photo of Eric Lawrence S. Obosa">
+        </div>
+          </div>
+        </figure>
+
+        <div class="eric__main">
+          <h2 id="name-01" class="eric__name">Eric Lawrence S. Obosa</h2>
+          <p class="eric__class">CLASS ▸ Front-Developer</p>
+          <p class="eric__bio">Studying frontend development and graphic designer</p>
+          <ul class="contact-row">
+          <li><a href="mailto:ericlawrenceobosa@gmail.com"><svg><use href="#icon-mail"></use></svg>ericlawrenceobosa@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/ryurain.taro" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-facebook"></use></svg>Eric Lawrence S. Obosa</a></li>
+          <li><a href="https://instagram.com/takamura302?dlrf=MXd0b3hieXZraTlmbg%3D%3D" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-instagram"></use></svg>L.</a></li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="eric__panels">
+        <section class="eric__panel eric__panel--data">
+          <h3>PLAYER DATA</h3>
+          <dl class="info-list">
+          <div class="info-list__item"><dt><svg><use href="#icon-user"></use></svg>Full name</dt><dd>Eric Lawrence S. Obosa</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-pin"></use></svg>Address</dt><dd>Licsi, Manaoag, Pangasinan</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-phone"></use></svg>Phone</dt><dd><a href="tel:+639933182950">+63 9933182950</a></dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-calendar"></use></svg>Date of birth</dt><dd>October 21, 2007</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-heart"></use></svg>Marital status</dt><dd>Single</dd></div>
+        </dl>
+        </section>
+
+        <section class="eric__panel eric__panel--ach">
+          <h3>ACHIEVEMENTS UNLOCKED</h3>
+          <ul class="eric__ach-list">
+<li class="eric__ach"><span class="eric__trophy" aria-hidden="true"><svg><use href="#icon-trophy"></use></svg></span><div><span class="eric__date">2023 - 2025</span><p>2x Champion MLBB MNHS Tournament</p></div></li>
+<li class="eric__ach"><span class="eric__trophy" aria-hidden="true"><svg><use href="#icon-trophy"></use></svg></span><div><span class="eric__date">Jan 2025</span><p>TESDA: NC-II passer</p></div></li>
+<li class="eric__ach"><span class="eric__trophy" aria-hidden="true"><svg><use href="#icon-trophy"></use></svg></span><div><span class="eric__date">Mar 2025</span><p>Most Outstanding officer (SBC) Skill Builder Club</p></div></li>
+          </ul>
+        </section>
+
+        <section class="eric__panel eric__panel--items">
+          <h3>INVENTORY</h3>
+          <ul class="eric__items">
+<li>Editor</li>
+<li>Gamer</li>
+<li>Graphic designer</li>
+          </ul>
+        </section>
+
+        <section class="eric__panel eric__panel--quest">
+          <h3>CURRENT QUEST</h3>
+          <div class="project-card "><h4></h4><p>layout, graphic design, ideas , frontend development</p></div>
+        </section>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ MEMBER 02 — SINGLE POLAROID + NOTEBOOK ============ -->
+  <section id="member-02" class="member member--mary" aria-labelledby="name-02">
+    <div class="member__inner">
+
+      <div class="mary__layout">
+        <figure class="mary__polaroid">
+          <span class="mary__tape mary__tape--l" aria-hidden="true"></span>
+          <span class="mary__tape mary__tape--r" aria-hidden="true"></span>
+          <div class="photo-frame">MS
+          <img class="photo-frame__img" src="ACE1BY1.jpg" alt="Photo of Mary Grace P. Samson">
+        </div>
+        </figure>
+
+        <div class="mary__intro">
+          <p class="mary__eyebrow">Member · 02</p>
+          <h2 id="name-02" class="mary__name">Mary Grace P. <em>Samson</em></h2>
+          <p class="mary__role">Styling &amp; Layout idea</p>
+          <p class="mary__bio"></p>
+          <ul class="mary__tags" aria-label="Skills">
+<li>Editor</li>
+<li>Playing ukulele</li>
+<li>Photography</li>
+          </ul>
+          <ul class="contact-row">
+          <li><a href="mailto:marygracesamson640@gmail.com"><svg><use href="#icon-mail"></use></svg>marygracesamson640@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/acekibidiii#" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-facebook"></use></svg>mary grace samson</a></li>
+          <li><a href="https://www.instagram.com/YOUR_USERNAME/" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-instagram"></use></svg>marygracesamson</a></li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="mary__lower">
+        <aside class="mary__notebook" aria-label="Personal information">
+          <h3>personal info</h3>
+          <dl class="info-list">
+          <div class="info-list__item"><dt><svg><use href="#icon-user"></use></svg>Full name</dt><dd>Mary Grace P. Samson</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-pin"></use></svg>Address</dt><dd>Pugaro, Manaoag, Pangasinan</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-phone"></use></svg>Phone</dt><dd><a href="tel:+639703485972">+63 970 348 5972</a></dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-calendar"></use></svg>Date of birth</dt><dd>May 17, 2008</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-heart"></use></svg>Marital status</dt><dd>Single</dd></div>
+        </dl>
+        </aside>
+
+        <div class="mary__highlights">
+          <h3 class="mary__heading">Highlights</h3>
+          <ul class="mary__award-list">
+<li class="mary__award"><span class="mary__rosette" aria-hidden="true"><svg><use href="#icon-spark"></use></svg></span><span class="mary__award-date">2024 — 2025</span><p>Top 2, Slogan Making Contest</p></li>
+<li class="mary__award"><span class="mary__rosette" aria-hidden="true"><svg><use href="#icon-spark"></use></svg></span><span class="mary__award-date">2025</span><p>Winner, Filipino Spelling Bee and Piling Larangan Academic Competitions</p></li>
+          </ul>
+          <div class="mary__project">
+            <p class="mary__heading mary__heading--light">Project</p>
+            <div class="project-card "><h4></h4><p>layout ideas, color harmony </p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ MEMBER 03 — COMIC POSTER ============ -->
+  <section id="member-03" class="member member--sammy" aria-labelledby="name-03">
+    <div class="member__inner">
+
+      <div class="sammy__title">
+        <span class="sammy__issue">ISSUE #03</span>
+        <h2 id="name-03" class="sammy__name">Sammy Samson Jr</h2>
+        <p class="sammy__role">Content &amp; Structure</p>
+        
+      </div>
+
+      <div class="sammy__panels">
+
+        <figure class="sammy__panel sammy__panel--photo">
+          <span class="sammy__bubble" aria-hidden="true">hey!</span>
+          <div class="photo-frame">
+          <img class="photo-frame__img" src="SAMMY1BY1.jpg" alt="Photo of Sammy Samson Jr">
+        </div>
+        </figure>
+
+        <section class="sammy__panel sammy__panel--info">
+          <h3>Personal info</h3>
+          <dl class="info-list">
+          <div class="info-list__item"><dt><svg><use href="#icon-user"></use></svg>Full name</dt><dd>Sammy Samson Jr.</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-pin"></use></svg>Address</dt><dd>Pugaro, Manaoag, Pangasinan</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-phone"></use></svg>Phone</dt><dd><a href="tel:+639346102504">+63 934 610 2504</a></dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-calendar"></use></svg>Date of birth</dt><dd>September 24, 2005</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-heart"></use></svg>Marital status</dt><dd>Single</dd></div>
+        </dl>
+        </section>
+
+        <section class="sammy__panel sammy__panel--skills">
+          <h3>Skills</h3>
+          <ul class="sammy__bubbles">
+<li>Poster making</li>
+<li>Public Speaking</li>
+<li>Accessibility</li>
+          </ul>
+        </section>
+
+        <section class="sammy__panel sammy__panel--links">
+          <h3>Say hi</h3>
+          <ul class="contact-row">
+          <li><a href="mailto:sammysamson244@gmail.com"><svg><use href="#icon-mail"></use></svg>sammysamson244@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/sammy.samson.jr.567571" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-facebook"></use></svg>Sammy Samson Jr.</a></li>
+          <li><a href="https://www.instagram.com/sammysamson244/" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-instagram"></use></svg>sammysamson</a></li>
+        </ul>
+        </section>
+
+        <section class="sammy__panel sammy__panel--tl">
+          <h3>Experience</h3>
+          <ul class="sammy__chapters">
+<li class="sammy__chapter"><span class="sammy__chapter-date">2024 — 2025</span><p>3rd Place - Poster Making SCIENCE AND INNOVATION MNHS</p></li>
+<li class="sammy__chapter"><span class="sammy__chapter-date">2025</span><p>Work Immersion EDUCATION PRIMARY - Our Lady of Manaoag Innovative School.INC.</p></li>
+          </ul>
+        </section>
+
+        <section class="sammy__panel sammy__panel--project">
+          <h3>Project</h3>
+          <div class="project-card "><h4></h4><p>gives ideas, elements of design, color combinations/</p></div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEMBER 04 — PLANNER PAGE ============ -->
+  <section id="member-04" class="member member--glysa" aria-labelledby="name-04">
+    <div class="member__inner">
+      <div class="glysa__page">
+        <span class="glysa__rings" aria-hidden="true"></span>
+
+        <header class="glysa__head">
+          <p class="glysa__label">TEAM PLANNER · 04</p>
+          <h2 id="name-04" class="glysa__name">Glysa A. Ancheta</h2>
+          <p class="glysa__role">Deployment &amp; QA</p>
+        </header>
+
+        <div class="glysa__cols">
+          <aside class="glysa__side">
+            <figure class="glysa__photo">
+              <span class="glysa__tape" aria-hidden="true"></span>
+              <div class="photo-frame">
+          <!-- <img class="photo-frame__img" src="GLYSA1BY1.jpg" alt="Photo of Glysa A. Ancheta"> -->
+        </div>
+            </figure>
+
+            <aside class="glysa__sticky" aria-label="Personal information">
+              <h3>personal info</h3>
+              <dl class="info-list">
+          <div class="info-list__item"><dt><svg><use href="#icon-user"></use></svg>Full name</dt><dd>Glysa A. Ancheta</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-pin"></use></svg>Address</dt><dd>Asingan, Pangasinan</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-phone"></use></svg>Phone</dt><dd><a href="tel:+639205047530">+63 920 504 7530</a></dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-calendar"></use></svg>Date of birth</dt><dd>November 02, 2007</dd></div>
+          <div class="info-list__item"><dt><svg><use href="#icon-heart"></use></svg>Marital status</dt><dd>Single</dd></div>
+        </dl>
+            </aside>
+          </aside>
+
+          <div class="glysa__main">
+            <p class="glysa__bio">Replace this with two or three sentences about this teammate — what they&#x27;re studying, what they focused on in this project, and what they&#x27;re into outside of it.</p>
+
+            <section class="glysa__block">
+              <h3>to do: skills</h3>
+              <ul class="glysa__checklist">
+<li>Teamwork</li>
+<li>Time Management</li>
+<li>Organizational Skills</li>
+              </ul>
+            </section>
+
+            <section class="glysa__block">
+              <h3>this year</h3>
+              <ul class="glysa__cals">
+<li class="glysa__cal"><span class="glysa__cal-year">2024</span><p>Job at symgup(bypass Asingan)</p></li>
+<li class="glysa__cal"><span class="glysa__cal-year">2025</span><p>Work Immersion at Asingan municipality</p></li>
+              </ul>
+            </section>
+
+            <section class="glysa__block">
+              <h3>current task</h3>
+              <div class="project-card "><h4></h4><p>gives ideas, typography</p><p class="project-card__stack">HTML · CSS</p><div class="project-card__links"><a href="#">Live demo →</a><a href="#">Source →</a></div></div>
+            </section>
+
+            <section class="glysa__block">
+              <h3>contact</h3>
+              <ul class="contact-row">
+          <li><a href="mailto:anchetaglysa02@gmail.com"><svg><use href="#icon-mail"></use></svg>anchetaglysa02@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/glysa.ancheta.5" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-facebook"></use></svg>Glysa A. Ancheta</a></li>
+        </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER STRIP #2 ============ -->
+  <div class="ticker ticker--pink ticker--reverse" aria-hidden="true">
+    <div class="ticker__track">
+      <span>THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦&nbsp;</span>
+      <span>THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦ THANKS FOR VISITING ✦ SAY HELLO ✦&nbsp;</span>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span class="blob blob--footer" aria-hidden="true"></span>
+  <p class="site-footer__title">thanks for stopping by<svg class="site-footer__spark"><use href="#icon-spark"></use></svg></p>
+  <a class="pill-link" href="#top">back to top ↑</a>
+</footer>
+
+</body>
+</html>   
