@@ -1,19 +1,19 @@
 /* =====================================================
    DESIGN TOKENS — playful scrapbook / collage style
    ===================================================== */
-:root {
+:root { /*the whole page”, so variables defined here work everywhere.*/
   --paper:   #F2F1ED;
   --ink:     #1A1A1A;
   --muted:   #6B6B68;
 
-  --pink:    #F0729B;
+  --pink:    #F0729B; /*is a hex color: red, green and blue in pairs of digits.*/
   --blue:    #3D66E0;
   --green:   #7FC94B;
   --yellow:  #FFC93C;
   --purple:  #B18CE8;
   --orange:  #F2632E;
 
-  --font-display: 'Fredoka', system-ui, sans-serif;
+  --font-display: 'Fredoka', system-ui, sans-serif; /* is a font stack*/
   --font-body:    'Poppins', system-ui, sans-serif;
   --font-hand:    'Caveat', cursive;
   --font-arcade:  'Press Start 2P', monospace;
@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background-color: var(--paper);
-  background-image: radial-gradient(rgba(26, 26, 26, 0.09) 1.3px, transparent 1.4px);
+  background-image: radial-gradient(rgba(26, 26, 26, 0.09) 1.3px, transparent 1.4px); /*px	fixed pixels (borders, shadows)*/
   background-size: 22px 22px;
   color: var(--ink);
   font-family: var(--font-body);
@@ -128,14 +128,13 @@ a:focus-visible {
 .doodle svg { width: 100%; height: 100%; display: block; }
 
 /* =====================================================
-   HERO
+   HERO first line
    ===================================================== */
 .hero {
   position: relative;
   overflow: hidden;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: clamp(3rem, 8vw, 5rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+  padding-block: clamp(3rem, 8vw, 5rem) clamp(4rem, 8vw, 6rem);
+  padding-inline: max(var(--gutter), calc((100% - var(--max-width)) / 2));
 }
 
 .blob--hero-1 {
